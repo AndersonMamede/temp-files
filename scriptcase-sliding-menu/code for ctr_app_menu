@@ -1,0 +1,28 @@
+"ctr_app_menu" is the application inside the sliding menu (the one that applies the change made in the select field)
+
+/*
+ * CODE001
+ * AJAX button
+ */
+// [glo_id_instructor] is used in WHERE clause in "grid_instructor_details" and "grid_instructor_classes" applications
+[glo_id_instructor] = {instructor};
+sc_ajax_javascript("updateAllAppsFromTabApp");
+
+
+
+
+/*
+ * CODE002
+ * JavaScript function "updateAllAppsFromTabApp"
+ */
+var appIsInsideSlidingMenu = window.parent != window;
+var scTabTableApls = window.parent.document.getElementsByClassName("scTabTableApls")[0];
+
+if(!appIsInsideSlidingMenu || !scTabTableApls){
+	return;
+}
+
+var parentIframes = scTabTableApls.querySelectorAll("iframe");
+for(var x = 0; x < parentIframes.length; x++){
+	parentIframes[x].contentWindow.location.reload(true);
+}
