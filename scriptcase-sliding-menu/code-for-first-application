@@ -53,18 +53,15 @@
 		return _document.getElementById("slidingMenu") != null;
 	}
 	
-	function addSlidingMenu(){
-		var parentDocument = window.parent.document;
-		
-		if(hasSlidingMenu(parentDocument)){
-			return;
+	function addToggleEvent(parentDocument, toggleSlidingMenu, slidingMenu){
+		if(!toggleSlidingMenu){
+			toggleSlidingMenu = parentDocument.getElementById("slidingMenu");
 		}
 		
-		var slidingMenu = parentDocument.createElement("div");
-		slidingMenu.id = "slidingMenu";
+		if(!slidingMenu){
+			slidingMenu = parentDocument.getElementById("toggleSlidingMenu");
+		}
 		
-		var toggleSlidingMenu = parentDocument.createElement("div");
-		toggleSlidingMenu.id = "toggleSlidingMenu";
 		toggleSlidingMenu.onclick = function(){
 			if((slidingMenu.getAttribute("class") || "").match(/open/)){
 				slidingMenu.setAttribute("class", "");
@@ -74,6 +71,22 @@
 				toggleSlidingMenu.setAttribute("class", "open");
 			}
 		};
+	}
+	
+	function addSlidingMenu(){
+		var parentDocument = window.parent.document;
+		
+		if(hasSlidingMenu(parentDocument)){
+			addToggleEvent(parentDocument);
+			return;
+		}
+		
+		var slidingMenu = parentDocument.createElement("div");
+		slidingMenu.id = "slidingMenu";
+		
+		var toggleSlidingMenu = parentDocument.createElement("div");
+		toggleSlidingMenu.id = "toggleSlidingMenu";
+		addToggleEvent(parentDocument, toggleSlidingMenu, slidingMenu);
 		
 		var ctrAppFrame = parentDocument.createElement("iframe");
 		ctrAppFrame.frameBorder = 0;
