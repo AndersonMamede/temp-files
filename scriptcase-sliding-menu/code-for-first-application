@@ -55,11 +55,11 @@
 	
 	function addToggleEvent(parentDocument, toggleSlidingMenu, slidingMenu){
 		if(!toggleSlidingMenu){
-			toggleSlidingMenu = parentDocument.getElementById("slidingMenu");
+			toggleSlidingMenu = parentDocument.getElementById("toggleSlidingMenu");
 		}
 		
 		if(!slidingMenu){
-			slidingMenu = parentDocument.getElementById("toggleSlidingMenu");
+			slidingMenu = parentDocument.getElementById("slidingMenu");
 		}
 		
 		toggleSlidingMenu.onclick = function(){
