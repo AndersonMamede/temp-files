@@ -1,5 +1,1 @@
-a
-
-@AndersonMamede
-
-b
+this is a :smile: emoji
