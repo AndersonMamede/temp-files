@@ -1,4 +1,4 @@
-Markdown: Syntax
+Syntax
 ================
 
 <ul id="ProjectSubmenu">
@@ -9,6 +9,12 @@ Markdown: Syntax
     <li><a href="/projects/markdown/dingus" title="Online Markdown Web Form">Dingus</a></li>
 </ul>
 
+```js
+var teste = "ok";
+if(prompt("ok?")){
+    return false;
+}
+```
 
 *   [Overview](#overview)
     *   [Philosophy](#philosophy)
@@ -280,14 +286,14 @@ adding additional levels of `>`:
 Blockquotes can contain other Markdown elements, including headers, lists,
 and code blocks:
 
-	> ## This is a header.
-	> 
-	> 1.   This is the first list item.
-	> 2.   This is the second list item.
-	> 
-	> Here's some example code:
-	> 
-	>     return shell_exec("echo $input | $markdown_script");
+  > ## This is a header.
+  > 
+  > 1.   This is the first list item.
+  > 2.   This is the second list item.
+  > 
+  > Here's some example code:
+  > 
+  >     return shell_exec("echo $input | $markdown_script");
 
 Any decent text editor should make email-style quoting easy. For
 example, with BBEdit, you can make a selection and choose Increase
@@ -595,9 +601,9 @@ That is:
 
 The following three link definitions are equivalent:
 
-	[foo]: http://example.com/  "Optional Title Here"
-	[foo]: http://example.com/  'Optional Title Here'
-	[foo]: http://example.com/  (Optional Title Here)
+  [foo]: http://example.com/  "Optional Title Here"
+  [foo]: http://example.com/  'Optional Title Here'
+  [foo]: http://example.com/  (Optional Title Here)
 
 **Note:** There is a known bug in Markdown.pl 1.0.1 which prevents
 single quotes from being used to delimit link titles.
@@ -619,8 +625,8 @@ Link definition names may consist of letters, numbers, spaces, and
 punctuation -- but they are *not* case sensitive. E.g. these two
 links:
 
-	[link text][a]
-	[link text][A]
+  [link text][a]
+  [link text][A]
 
 are equivalent.
 
@@ -629,20 +635,20 @@ link, in which case the link text itself is used as the name.
 Just use an empty set of square brackets -- e.g., to link the word
 "Google" to the google.com web site, you could simply write:
 
-	[Google][]
+  [Google][]
 
 And then define the link:
 
-	[Google]: http://google.com/
+  [Google]: http://google.com/
 
 Because link names may contain spaces, this shortcut even works for
 multiple words in the link text:
 
-	Visit [Daring Fireball][] for more information.
+  Visit [Daring Fireball][] for more information.
 
 And then define the link:
-	
-	[Daring Fireball]: http://daringfireball.net/
+  
+  [Daring Fireball]: http://daringfireball.net/
 
 Link definitions can be placed anywhere in your Markdown document. I
 tend to put them immediately after each paragraph in which they're
@@ -764,15 +770,15 @@ The backtick delimiters surrounding a code span may include spaces --
 one after the opening, one before the closing. This allows you to place
 literal backtick characters at the beginning or end of a code span:
 
-	A single backtick in a code span: `` ` ``
-	
-	A backtick-delimited string in a code span: `` `foo` ``
+  A single backtick in a code span: `` ` ``
+  
+  A backtick-delimited string in a code span: `` `foo` ``
 
 will produce:
 
-	<p>A single backtick in a code span: <code>`</code></p>
-	
-	<p>A backtick-delimited string in a code span: <code>`foo`</code></p>
+  <p>A single backtick in a code span: <code>`</code></p>
+  
+  <p>A backtick-delimited string in a code span: <code>`foo`</code></p>
 
 With a code span, ampersands and angle brackets are encoded as HTML
 entities automatically, which makes it easy to include example HTML
@@ -890,7 +896,7 @@ Markdown provides backslash escapes for the following characters:
     []  square brackets
     ()  parentheses
     #   hash mark
-	+	plus sign
-	-	minus sign (hyphen)
+  + plus sign
+  - minus sign (hyphen)
     .   dot
     !   exclamation mark
