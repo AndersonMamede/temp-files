@@ -12,8 +12,7 @@ The front-end world is becoming bigger and bigger. Web apps change over time, as
 
 Monolith front-end:
 
-![Monolith](http://localhost/vision/monolith.png "Monolith")
-
+<img src="https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/monolith-front-end.png" width="300"/>
 
 
 
