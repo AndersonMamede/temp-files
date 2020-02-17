@@ -12,16 +12,9 @@ The front-end world is becoming bigger and bigger. Web apps change over time, as
 
 Monolith front-end:
 
-<img src="https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/monolith-front-end.png" width="300"/>
+<img src="https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/monolith-front-end.png"/>
 
 
 
 For that reason Virtuagym has decided to move away from the monolith front-end and go towards micro-frontend.
 
-
-
-
-The monolithic approach doesn’t work very well for larger web apps -> challenges?
-
-
-# 
