@@ -24,6 +24,8 @@ The micro-frontend architecture:
 
 ![Micro-frontend](https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/micro-frontend.png)
 
-There are different approaches to the micro-frontend architecture, and the chosen approach is having multiple apps that live at different URLs (e.g. one at /schedule, one at /goals, etc). Going from one app to another is a full page refresh that loads a different app.
+# Micro-frontend in Virtuagym
+
+There are different approaches to the micro-frontend architecture, and the chosen approach is having multiple apps that live at different URLs (e.g. one app at /schedule, another app at /goals, etc). Going from one app to another is a full page refresh that loads a different app.
 
 It is possible to compose these apps using different components and they can also use shared components as needed for common functionality, such as the [navigation bar component](https://git.digifit.in/frontend-developer/vue-package-navigation-bar).
