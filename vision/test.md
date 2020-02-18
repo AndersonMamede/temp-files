@@ -14,9 +14,9 @@ The monolith frontend using multiple backend services:
 
 ![Monolith frontend](https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/monolith-front-end.png)
 
-To solve some of those problems and grow faster, Virtuagym has decided to move away from the monolith frontend and go towards the micro-frontend architecture.
-
 # Current situation
+
+To solve some of those problems and grow faster, Virtuagym has decided to move away from the monolith frontend and go towards the micro-frontend architecture.
 
 ## Micro-frontend
 
