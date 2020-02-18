@@ -36,7 +36,7 @@ To help achieve the micro-frontend architecture and build the different apps, Vi
 
 Vue.js is currently one of the most popular open-source JavaScript framework for building user interfaces and apps (Single Page Applications). Its core library is focused on the view layer only and is easy to pick up and integrate with other libraries or existing projects.
 
-You can find [more details on our confluence page](https://virtuagymdev.atlassian.net/wiki/spaces/DEVWIKI/pages/438632493/Intro+to+Vue.js).
+More details about Vue.js in [our internal page](https://virtuagymdev.atlassian.net/wiki/spaces/DEVWIKI/pages/438632493/Intro+to+Vue.js) or in its [official page](https://vuejs.org/).
 
 ### > Vuetify
 
