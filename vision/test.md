@@ -26,7 +26,7 @@ The micro-frontend architecture:
 
 ![Micro-frontend](https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/micro-frontend.png)
 
-### Micro-frontend in Virtuagym
+## Micro-frontend in Virtuagym
 
 There are different approaches to the micro-frontend architecture, and the chosen approach is having multiple apps (SPA - Single Page Applications) that live at different URLs (e.g. one app at /schedule, another app at /goals, etc), and going from one app to another is a full page refresh that loads a different app.
 
