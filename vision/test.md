@@ -32,6 +32,8 @@ To help achieve the micro-frontend architecture and build the different apps, Vi
 
 ### > Vue.js
 
+![Vue.js](https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/vuejs.png)
+
 Vue.js is an open-source JavaScript framework for building user interfaces and apps (Single Page Applications). Its core library is focused on the view layer only and is easy to pick up and integrate with other libraries or existing projects.
 
 ### > Vuetify
