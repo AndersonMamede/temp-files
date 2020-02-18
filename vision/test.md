@@ -36,11 +36,12 @@ To help achieve the micro-frontend architecture and build the different apps, Vi
 
 Vue.js is currently one of the most popular open-source JavaScript framework for building user interfaces and apps (Single Page Applications). Its core library is focused on the view layer only and is easy to pick up and integrate with other libraries or existing projects.
 
-More details about Vue.js in [our internal page](https://virtuagymdev.atlassian.net/wiki/spaces/DEVWIKI/pages/438632493/Intro+to+Vue.js) or in its [official page](https://vuejs.org/).
+More details about Vue.js in [our internal page](https://virtuagymdev.atlassian.net/wiki/spaces/DEVWIKI/pages/438632493/Intro+to+Vue.js) and in its [official page](https://vuejs.org/).
 
 ### > Vuetify
 
-Vuetify is a framework over Vue.js, which lets you create clean, semantic, and reusable UI components.
+<img src="https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/vuetify.png" height="32"/>
 
+Vuetify is an open-source component library for Vue.js, which lets you create clean, consistent, semantic, and reusable UI components. It is developed exactly according to [Material Design specification](https://material.io/) and provides users with everything that is needed to build rich and engaging web apps.
 
 
