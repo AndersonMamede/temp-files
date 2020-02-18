@@ -32,7 +32,7 @@ There are different approaches to the micro-frontend architecture, and the chose
 
 These apps are composed by multiple components (e.g. buttons, lists, cards, tables), and they can also use shared components as needed for common functionality, such as the [navigation bar component](https://git.digifit.in/frontend-developer/vue-package-navigation-bar). The main benefits of using shared components are reduced effort through re-use of code and visual consistency.
 
-To help achieve the micro-frontend architecture and build the different apps, Virtuagym chose to use the following tools:
+To help achieve the micro-frontend architecture and build the different apps, Virtuagym chose the following tools:
 
 #### > Vue.js
 
