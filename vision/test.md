@@ -30,9 +30,11 @@ There are different approaches to the micro-frontend architecture, and the chose
 
 To help achieve the micro-frontend architecture and build the different apps, Virtuagym chose the following tools:
 
-### > Vue.js <img src="https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/vuejs.png" height="20"/>
+### > Vue.js
 
-Vue.js is an open-source JavaScript framework for building user interfaces and apps (Single Page Applications). Its core library is focused on the view layer only and is easy to pick up and integrate with other libraries or existing projects.
+<img src="https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/vuejs.png" height="32"/>
+
+Vue.js is currently one of the most popular open-source JavaScript framework for building user interfaces and apps (Single Page Applications). Its core library is focused on the view layer only and is easy to pick up and integrate with other libraries or existing projects.
 
 ### > Vuetify
 
