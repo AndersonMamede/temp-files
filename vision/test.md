@@ -26,7 +26,9 @@ The micro-frontend architecture:
 
 # Micro-frontend in Virtuagym
 
-There are different approaches to the micro-frontend architecture, and the chosen approach is having multiple apps (SPA - Single Page Applications) that live at different URLs (e.g. one app at /schedule, another app at /goals, etc), and going from one app to another is a full page refresh that loads a different app. These apps are composed by multiple components, e.g. buttons, lists, cards, tables), and they can also use shared components as needed for common functionality, such as the [navigation bar component](https://git.digifit.in/frontend-developer/vue-package-navigation-bar).
+There are different approaches to the micro-frontend architecture, and the chosen approach is having multiple apps (SPA - Single Page Applications) that live at different URLs (e.g. one app at /schedule, another app at /goals, etc), and going from one app to another is a full page refresh that loads a different app.
+
+These apps are composed by multiple components, e.g. buttons, lists, cards, tables), and they can also use shared components as needed for common functionality, such as the [navigation bar component](https://git.digifit.in/frontend-developer/vue-package-navigation-bar).
 
 To help achieve the micro-frontend architecture and build the different apps, Virtuagym chose to use the following tools:
 
@@ -43,5 +45,3 @@ More details about Vue.js in [our internal page](https://virtuagymdev.atlassian.
 <img src="https://raw.githubusercontent.com/AndersonMamede/temp-files/master/vision/vuetify.png" height="32"/>
 
 Vuetify is an open-source component library for Vue.js, which lets you create clean, consistent, semantic, and reusable UI components. It is developed exactly according to [Material Design specification](https://material.io/) and provides users with everything that is needed to build rich and engaging web apps.
-
-
