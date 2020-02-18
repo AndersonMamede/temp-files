@@ -30,7 +30,7 @@ The micro-frontend architecture:
 
 There are different approaches to the micro-frontend architecture, and the chosen approach is having multiple apps (SPA - Single Page Applications) that live at different URLs (e.g. one app at /schedule, another app at /goals, etc), and going from one app to another is a full page refresh that loads a different app.
 
-These apps are composed by multiple components, e.g. buttons, lists, cards, tables), and they can also use shared components as needed for common functionality, such as the [navigation bar component](https://git.digifit.in/frontend-developer/vue-package-navigation-bar).
+These apps are composed by multiple components (e.g. buttons, lists, cards, tables), and they can also use shared components as needed for common functionality, such as the [navigation bar component](https://git.digifit.in/frontend-developer/vue-package-navigation-bar). The main benefits of using shared components are reduced effort through re-use of code and visual consistency.
 
 To help achieve the micro-frontend architecture and build the different apps, Virtuagym chose to use the following tools:
 
