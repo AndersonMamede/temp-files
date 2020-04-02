@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>JM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html, body, #map {
+        height: 100%;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        color: #333;
+      }
+
+      #info-window {
+        display: none;
+        z-index: 98;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      #info-window.active {
+        display: block;
+      }
+
+      #info-window-container {
+        z-index: 99;
+        overflow: hidden;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -210px;
+        margin-left: -160px;
+        width: 320px;
+        height: 420px;
+        background: url("paper-scroll.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      #info-window-header {
+        margin-top: 38px;
+        text-align: center;
+      }
+
+      #info-window-header > img {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      #info-window-body {
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        max-width: calc(100% - 75px);
+        max-height: calc(100% - 220px);
+        margin: 5px 30px 10px 45px;
+      }
+
+      #info-window-footer {
+        text-align: center;
+      }
+
+      #info-window-btn-close {
+        margin-right: 30px;
+      }
+
+      #info-window-btn-close,
+      #info-window-btn-ar {
+        border: 1px solid #BBB090;
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <div id="info-window" class="hidden">
+      <div id="info-window-container">
+        <div id="info-window-header">
+          <img src="anne-frank.jpg" width="100" title="Anne Frank" alt="Anne Frank">
+        </div>
+        <div id="info-window-body">
+          Lorem ipsum do lora amet anom, consectetur adipis cading elitas. Pellentesque suscipit enim ac mollis hendrerit. Morbi nec magna
+          nisl. Ut neque libero, eleifend ac fermentum sit amet, dictum ut nulla. Aliquam ac libero in elit tristique cursus non
+          vitae magna. Cras tincidunt, nisi ut elementum molestie, felis lectus convallis velit, sed.<br/><br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consequat lacus quis nisi lobortis fringilla. Maecenas
+          bibendum gravida pretium. Nulla sit amet erat in magna tempor bibendum ut quis turpis. In ac ligula egestas, tincidunt
+          urna elementum, tristique mi.<br /><br />
+          Mauris justo libero, volutpat at dictum ut, vulputate ultrices felis. Pellentesque.
+        </div>
+        <div id="info-window-footer">
+          <button id="info-window-btn-close">Fechar</button>
+          <button id="info-window-btn-ar">Abrir AR</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var map;
+      var infoWindow = document.querySelector('#info-window');
+
+      function initMap () {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(52.3771255, 4.8793123),
+          zoom: 13,
+        });
+
+        var markers = [
+          { position: new google.maps.LatLng(52.012118, 4.359481) }, //house-of-vermeer
+          { position: new google.maps.LatLng(52.7159474, 6.8499555) }, //van-gogh-huis
+          { position: new google.maps.LatLng(52.3659909, 4.8964699) }, //guarda-noite-praca-rembramt
+          { position: new google.maps.LatLng(51.9175663, 4.480026) }, //museu-maritmo-rotterdam
+          { position: new google.maps.LatLng(52.3583536, 4.8786361) }, //moco-museu
+          { position: new google.maps.LatLng(52.3583536, 4.8786361) }, //stedelijk-museum
+          { position: new google.maps.LatLng(52.0808948, 4.3042691) }, //palacio-real-haia
+          { position: new google.maps.LatLng(52.3742343, 4.9101494) }, //nemo-museum
+          { position: new google.maps.LatLng(51.9203321, 4.4815769) }, //markhal-rotterdam
+          { position: new google.maps.LatLng(51.9203325, 4.488143) }, //casas-cubo
+          { position: new google.maps.LatLng(51.9220732, 4.479117) }, //rotterdam-museum
+          { position: new google.maps.LatLng(52.0851665, 4.2887342) }, //maurit-huis
+          { position: new google.maps.LatLng(52.3691591, 4.8901602) }, //casa-rembrant
+          { position: new google.maps.LatLng(52.373186, 4.8891793) }, //palacio
+          { position: new google.maps.LatLng(52.3343272, 5.0692339) }, //castelo
+          { position: new google.maps.LatLng(52.4777255, 4.8173681) },
+          { position: new google.maps.LatLng(52.3584159, 4.8788869) },
+          { position: new google.maps.LatLng(52.3599976, 4.8830301) },
+          { position: new google.maps.LatLng(52.3771255, 4.8793123) },
+        ];
+
+        for (var x = 0; x < markers.length; x++) {
+          var marker = new google.maps.Marker({
+            position: markers[x].position,
+            icon: 'marker-paper-scroll.png',
+            map: map,
+          });
+
+          marker.addListener('click', function() {
+            infoWindow.classList.add('active');
+          });
+        };
+
+        document.querySelector('#info-window-btn-close').addEventListener('click', function () {
+          infoWindow.classList.remove('active');
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmEueAvM7sgyBDE-vM4RU81IBwqMpwojM&callback=initMap">
+    </script>
+  </body>
+</html>
